@@ -350,7 +350,7 @@ void x_window_kill(xcb_window_t window, kill_window_t kill_window) {
     ev->data.data32[1] = XCB_CURRENT_TIME;
 
     LOG("Sending WM_DELETE to the client\n");
-    xcb_send_event(conn, false, window, XCB_EVENT_MASK_NO_EVENT, (char *)ev);
+    //xcb_send_event(conn, false, window, XCB_EVENT_MASK_NO_EVENT, (char *)ev);
     xcb_flush(conn);
     free(event);
 }
