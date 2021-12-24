@@ -218,7 +218,7 @@ bool tree_close_internal(Con *con, kill_window_t kill_window, bool dont_kill_par
     }
 
     if (con->window != NULL) {
-        if (kill_window != DONT_KILL_WINDOW) {
+        if (kill_window != DONT_KILL_WINDOW && 0) {
             x_window_kill(con->window->id, kill_window);
             return false;
         } else {
